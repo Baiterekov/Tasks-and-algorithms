@@ -17,7 +17,17 @@ Example 3:
 Input: nums = [1,1,2,2], n = 2
 Output: [1,2,1,2]
 """
+# february 6 2023
+nums = [1,1,2,2]
+n = 2
+xy_arr = []
 
+for i in range(0, n):
+	xy_arr.append(nums[i])
+	xy_arr.append(nums[n+i])
+print(xy_arr)
+
+########################## march 17 2022
 nums = [2,5,1,3,4,7]
 n = 3
 first_arr = []
