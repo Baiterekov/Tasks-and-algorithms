@@ -29,7 +29,6 @@ So the total number of operations required is 1.
  
 
 Constraints:
-
 0 <= num1, num2 <= 105
 """
 
