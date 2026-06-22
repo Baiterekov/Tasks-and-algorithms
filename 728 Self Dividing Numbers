@@ -1,0 +1,16 @@
+class Solution:
+    def selfDividingNumbers(left: int, right: int):
+        result = []
+        for  i in range(left, right+1):
+            is_dividing_number = True
+            for k in str(i):
+                k = int(k)
+                if  k==0 or i%k!=0:
+                    is_dividing_number = False
+                    break
+            if is_dividing_number == True:
+                result.append(i)
+
+        return result
+    
+print(Solution.selfDividingNumbers(1, 85))
