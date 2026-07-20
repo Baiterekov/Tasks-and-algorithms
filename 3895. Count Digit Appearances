@@ -1,0 +1,9 @@
+class Solution:
+    def countDigitOccurrences(nums, digit):
+        count_digit = 0
+        str_digit = str(digit)
+        for i in nums:
+            for j in str(i):
+                if str_digit == j:
+                    count_digit +=1
+        return count_digit
