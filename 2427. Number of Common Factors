@@ -1,0 +1,11 @@
+class Solution:
+    def commonFactors(self, a: int, b: int) -> int:
+        count_num = 0
+        loop_ch = 0
+        if (a>=b):
+            loop_ch = b
+        else: loop_ch = a
+        for i in range(1, loop_ch+1):
+            if a%i==0 and b%i==0:
+                count_num = count_num + 1
+        return count_num
