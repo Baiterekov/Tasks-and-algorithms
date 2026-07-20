@@ -1,0 +1,19 @@
+class Solution:
+    def isSameAfterReversals(self, num: int) -> bool:
+        reversed1 = ""
+        reversed2 = ""
+        for i in str(num):
+            reversed1 = str(i) + reversed1
+        int_reversed1 = int(reversed1)
+        for j in str(int_reversed1):
+            reversed2 = str(j) + reversed2
+        if int(reversed2)==num:
+            return True
+        else: return False
+
+
+#class Solution:
+#    def isSameAfterReversals(self, num: int) -> bool:
+#        if num%10==0 and num!=0:
+#            return False
+#        else: return True
