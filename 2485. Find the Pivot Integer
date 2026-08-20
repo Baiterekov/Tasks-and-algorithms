@@ -1,0 +1,17 @@
+class Solution:
+    def pivotInteger(n):
+        check = n
+        x = n
+        pivot = 0
+        for i in range(0,n+1):
+            pivot = pivot + i
+        while True:
+            if(pivot==check):
+                return x
+            elif(pivot<=check):
+                return -1
+            pivot = pivot - x
+            x = x-1
+            check = check + x
+
+print(Solution.pivotInteger(4))
