@@ -1,0 +1,7 @@
+class Solution:
+    def minMoves(nums):
+        max_num = max(nums)
+        count = 0
+        for i in range(0, len(nums)):
+            count = count + (max_num - nums[i])
+        return count
