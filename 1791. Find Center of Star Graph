@@ -1,0 +1,11 @@
+class Solution:
+    def findCenter(edges):
+        find_center_x = edges[0][0]
+        find_center_y = edges[0][1]
+        if find_center_x in edges[1]:
+            return find_center_x
+        else: return find_center_y
+
+
+edges = [[1,2],[2,3],[4,2]]
+print(Solution.findCenter(edges))
