@@ -1,0 +1,10 @@
+class Solution:
+    def concatWithReverse(nums):
+        i = len(nums)
+        while i > 0:
+            i=i-1
+            nums.append(nums[i])
+        return nums
+
+nums = nums = [1,2,3]
+print(Solution.concatWithReverse(nums))
