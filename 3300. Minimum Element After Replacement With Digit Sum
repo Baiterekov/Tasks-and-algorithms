@@ -1,0 +1,15 @@
+class Solution:
+    def minElement(nums):
+        digit_check = ""
+        sum_digit = 0
+        for i in range(0, len(nums)):
+            digit_check = str(nums[i])
+            for j in digit_check:
+                sum_digit = sum_digit + int(j)
+            nums[i] = sum_digit
+            sum_digit = 0
+        return min(nums)
+
+
+nums = [10,12,13,14]
+print(Solution.minElement(nums))
