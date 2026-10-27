@@ -1,0 +1,12 @@
+class Solution:
+    def maxDistinct(s: str):
+        chracterCount = 0
+        characterCheck = ""
+        for i in s:
+            if i not in characterCheck:
+                characterCheck = characterCheck + i
+                chracterCount += 1
+        return chracterCount
+
+s="abcd"
+print(Solution.maxDistinct(s))
