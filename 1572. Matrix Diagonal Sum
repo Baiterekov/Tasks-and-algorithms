@@ -1,0 +1,13 @@
+class Solution:
+    def diagonalSum(mat):
+        diogonals_sum = 0
+        for i in range(0, len(mat)):
+            diogonals_sum = diogonals_sum + mat[i][i]+ mat[i][len(mat)-1-i]
+        if len(mat)%2==1:
+            return diogonals_sum-mat[(len(mat)//2)][(len(mat)//2)]
+        else: return  diogonals_sum
+
+mat = [[1,2,3], [4,5,6], [7,8,9]]
+
+print(Solution.diagonalSum(mat))
+        
