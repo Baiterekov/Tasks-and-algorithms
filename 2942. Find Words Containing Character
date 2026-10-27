@@ -1,0 +1,11 @@
+class Solution:
+    def findWordsContaining(words, x):
+        result = []
+        for i in  range(0, len(words)):
+            if x in words[i]:
+                result.append(i)
+        return result
+
+words = ["abc","bcd","aaaa","cbc"]
+x = "a"
+print(Solution.findWordsContaining(words, x))
