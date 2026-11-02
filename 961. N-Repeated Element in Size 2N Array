@@ -1,0 +1,29 @@
+# есть ошибка тут, но leetcode принял код Runtime 0ms  Beats100.00%  Memory 20.37MB  Beats62.18%
+# поиск подстроки не равен проверке наличия числа среди ранее встреченных чисел
+# nums = [12, 2, 3, 3]
+# "2" in "12"  # True
+# class Solution:
+#     def repeatedNTimes(nums):
+#         check = ''
+#         for i in nums:
+#             chr_check = str(i)
+#             if chr_check in check:
+#                 return i
+#             else: check = check + chr_check
+
+
+
+class Solution:
+    def repeatedNTimes(nums):
+        count = 0
+        for i in nums:
+            for j in nums:
+                if i==j:
+                    count = count +1
+            if count > 1:
+                return i
+            count = 0
+        
+nums = [5,1,5,2,5,3,5,4]
+print(Solution.repeatedNTimes(nums))
+
