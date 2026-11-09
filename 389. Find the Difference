@@ -1,0 +1,12 @@
+class Solution:
+    def findTheDifference(s,t):
+        i = 0
+        chr_check = t
+        while  i<len(s):
+            chr_check = chr_check.replace(s[i],"", 1)
+            i += 1
+        return chr_check
+
+s = "bcda"
+t = "abcde"  
+print(Solution.findTheDifference(s,t))
