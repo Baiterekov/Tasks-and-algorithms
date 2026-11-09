@@ -1,0 +1,25 @@
+# 345. Reverse Vowels of a String
+
+class Solution:
+    def reverseVowels(s):
+        letters = 'aeiouAEIOU'
+        first_letter = []
+        result = ''
+        count = 0
+        charactersNeedToChange = []
+        for i in range(0, len(s)):
+            if s[i] in letters:
+                charactersNeedToChange.append(i)
+                count += 1
+            first_letter.append(s[i])
+        for j in range(0, len(first_letter)):
+            if s[j] in letters:
+                count -= 1
+                result = result + first_letter[charactersNeedToChange[count]]
+            else:
+                result = result + first_letter[j]
+        return result
+
+s = "leetcode"
+print(Solution.reverseVowels(s))
+
