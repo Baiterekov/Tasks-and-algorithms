@@ -1,0 +1,13 @@
+class Solution:
+    def findComplement(num):
+        reverseBitToNum = 0
+        count = 0
+        while num>0:
+            if num%2 == 0:
+                reverseBitToNum = reverseBitToNum + 2**count
+            num = num//2
+            count +=1
+        return reverseBitToNum
+
+num = 36
+print(Solution.findComplement(num))
