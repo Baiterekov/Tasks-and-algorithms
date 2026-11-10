@@ -1,0 +1,14 @@
+class Solution:
+    def countSegments(s):
+        result = s.split(" ")
+        character_check = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()_+-=',.:1234567890"
+        count = 0
+        for i in result:
+            for j in character_check:
+                if j in i: 
+                    print("i = ", i, "     j = ", j)
+                    count +=1
+                    print("count = ", count)
+                    break
+
+        return count
