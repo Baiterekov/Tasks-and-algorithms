@@ -1,0 +1,32 @@
+class Solution:
+    def hammingDistance(x, y):
+        def decimalToBinary(num):
+            binaryNum = ""
+            while num >0:
+                if num%2==0:
+                    binaryNum = "0" + binaryNum
+                else: 
+                    binaryNum = "1" + binaryNum
+                num = num//2
+            return binaryNum
+        def countZero(zeroCount):
+            zeroStr = ""
+            for i in range(0, zeroCount):
+                zeroStr = zeroStr + "0"
+            return zeroStr
+        bin_x = decimalToBinary(x)
+        bin_y = decimalToBinary(y)
+        if len(bin_x)<len(bin_y):
+            bin_x = countZero(len(bin_y)-len(bin_x)) + bin_x
+        elif len(bin_x)>len(bin_y):
+            bin_y = countZero(len(bin_x)-len(bin_y)) + bin_y
+        count = 0
+        for i in range(0, len(bin_x)):
+            if bin_x[i]!=bin_y[i]:
+                count +=1
+        return count
+
+x = 1 
+y = 4
+
+print(Solution.hammingDistance(x, y))
