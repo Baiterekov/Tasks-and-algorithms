@@ -1,0 +1,30 @@
+class Solution:
+    def findRelativeRanks(score):
+        replace_values = 0
+        count = len(score)
+        check_arr = []
+        place_arr = []
+        for i in range(0, count):
+            check_arr.append(score[i])
+            if i == 0:
+                place_arr.append("Gold Medal")
+            elif i == 1: 
+                place_arr.append("Silver Medal")
+            elif i == 2:
+                place_arr.append("Bronze Medal")
+            else: place_arr.append(str(i+1))
+        for j in range(0, count):
+            for k in range(0, count):
+                if check_arr[j]>check_arr[k]:
+                    replace_values = check_arr[k]
+                    check_arr[k] = check_arr[j]
+                    check_arr[j] = replace_values
+        for l in range(0, count):
+            for z in range(0, count):
+                if score[z] == check_arr[l]:
+                    score[z] = place_arr[l]
+        return score
+            
+
+score = [10,3,8,9,4]
+print(Solution.findRelativeRanks(score))
