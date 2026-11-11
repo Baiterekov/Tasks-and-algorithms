@@ -1,0 +1,11 @@
+class Solution:
+    def largestAltitude(gain):
+        result = [0]
+        point = 0
+        for i in gain:
+            point = point + (i)
+            result.append(point)
+        return max(result)
+
+gain = [-5,1,5,0,-7]
+print(Solution.largestAltitude(gain))
